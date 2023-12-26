@@ -1,0 +1,70 @@
+/*Absolute positioning removes the item from the document flow, 
+this means that the item no longer is taken in account by other elements. 
+With this change it's possible to move the item with the keywords top, right, bottom and left.
+The item doesn't move based on his previous location, 
+instead it moves based on the edges of his parent container. 
+this means that if you style an item to have 10px top, 
+the item will be 10 pixels away from the top edge of his parent container.
+The same thing occurs with the other keywords.*/
+
+/*Absolute Example*/
+
+.item-1 {
+  position: absolute;
+  top: 10px;
+}
+
+/*By default the item will position itself based on the html, 
+this means that it will take in account the edges to move.
+To make it act based on his parent container 
+all that you need to do is change the position of the parent to anything beside static, 
+because this is the default value of everything.
+
+Try it by erasing the comment from this style.*/
+
+/*.container {
+    position: absolute;
+}*/
+
+
+/*Relative positioning*/
+
+/*With relative positioning the item stays in the flow of the document but still is able to use the movement keywords.
+The main difference with absolute is that relative positioned items move, 
+not based on his parent, but based on his original location.
+so for example, if we set an item to be relative and place the left style to be 300px,
+now the item will be 300px away from the left side of his original position.*/
+
+/*Relative Example*/
+.item-3 {
+  position: relative;
+  left:300px;
+}
+
+
+/*Fixed positioning*/
+
+/*A fixed positioned item works almost identical to an absolute positioned one with two little differences.
+An item with this position can't be moved relative to his parent, instead it moves 
+based on the html of the page.
+The other difference is that a fixed item will follow the user 
+as they scroll through the page while staying on the same place.*/
+
+/*Fixed positioning*/
+.item-7 {
+    position: fixed;
+    top:10px;
+    right: 100px;
+}
+
+/*Sticky positioning*/
+
+/*Works as a mix between fixed and relative.
+Doesn't sticks the item to the screen until the declared top position 
+is reached by the edge of the screen and while the bottom of his container is not touched.*/
+
+/*Sticky Example*/
+.item-8 {
+    position:sticky;
+    top: 0;
+}
