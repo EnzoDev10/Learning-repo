@@ -1,8 +1,16 @@
-{% extends "layout.html" %}
+<!-- A template folder is needed to work with flask and 
+    it must be specified with the template folder parameter -->
+<!-- Same thing happens with the styles and the static folder. -->
+
+
+    <!-- The html file that we try to extend must be wrote with single quote to prevent errors -->
+{% extends 'layout.html'%}
 
 {% block content %}
-<div>
-    {{data}}
-</div>
-
+    <div>
+        {% for datas in data %}
+        <span>{{ datas["_id"] }}</span>
+        <p>{{datas["text"]}}</p>
+        {% endfor %}
+    </div>
 {% endblock content %}
