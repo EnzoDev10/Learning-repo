@@ -1,6 +1,8 @@
 from flask import Flask, render_template
 import requests
 import json
+
+# TODO: update the folders as i deleted them.
     
 app = Flask(__name__, template_folder=r"C:\Users\Administrator\Desktop\coding\repos\Learning-repo\Python\back\api\templates")
  
