@@ -2,9 +2,10 @@ from flask import Flask, render_template
 import requests
 import json
 
-# TODO: update the folders as i deleted them.
     
-app = Flask(__name__, template_folder=r"C:\Users\Administrator\Desktop\coding\repos\Learning-repo\Python\back\api\templates")
+app = Flask(__name__, 
+            template_folder=r"C:\Users\Administrator\Desktop\coding\repos\Learning-repo\Python\API\templates",
+            static_folder=r"C:\Users\Administrator\Desktop\coding\repos\Learning-repo\Python\API\static")
  
 """ Get is the default value of methods but as a good redability practice it should be specified."""
 @app.route("/", methods=["GET"])
