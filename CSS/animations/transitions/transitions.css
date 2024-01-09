@@ -12,11 +12,10 @@ body {
     margin: auto;
     top: 200px;
     transition-property: all;
-    transition-duration: 1s;
-    transition-timing-function: ease ease-in;   
+    
 }
 
 .box:hover {
     background: url(images/guts-blue.jpg);
-    transform: rotatex(360deg);
+    transform: rotatey(180deg);
 }

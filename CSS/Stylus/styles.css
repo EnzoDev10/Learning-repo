@@ -1,0 +1,39 @@
+html,
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow: hidden;
+}
+body {
+  background-color: #151f28;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #container {
+  min-width: 400px;
+  min-height: 400px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+}
+body .box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ddd;
+  border: solid 1px #ddd;
+}
+body .box-1 {
+  background-color: #3456f2;
+}
+body .box-2 {
+  background-color: #f25634;
+}
+body .box-3 {
+  background-color: #56f234;
+}
+body .box-4 {
+  background-color: #c911ff;
+}
