@@ -24,6 +24,8 @@ body .box {
   justify-content: center;
   color: #ddd;
   border: solid 1px #ddd;
+  -webkit-border-radius: 25%;
+  border-radius: 25%;
 }
 body .box-1 {
   background-color: #3456f2;
