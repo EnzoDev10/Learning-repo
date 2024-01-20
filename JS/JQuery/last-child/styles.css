@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+#container {
+    margin-top: 100px;
+}
+
+div {
+    font-size: 18px;
+    font-weight: bold;
+}
+p {
+    margin-left: 50px;
+}
+
+#web {
+    display: none;
+}
+
+h1 {
+    color: green;
+    cursor: pointer;
+}
