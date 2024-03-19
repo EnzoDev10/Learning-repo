@@ -70,15 +70,15 @@ def clicker():
     # Gets the cookie button
     cookie = driver.find_element(By.ID, "bigCookie")
 
-    products = driver.find_elements(By.CLASS_NAME, "product")
+    while True:
+        products = driver.find_elements(By.CLASS_NAME, "product")
 
-    for product in products:
+        for product in products:
             product_class = product.get_attribute("class")
-            print(product_class)
-
-    
-    
-
+            if product_class == "product unlocked enabled":
+                product.click()
+            else:
+                cookie.click()
 
 
 clicker()
