@@ -53,26 +53,28 @@ def google():
 def clicker():
     # Get URL
     driver.get("https://orteil.dashnet.org/cookieclicker/")
-    driver.maximize_window()
 
+    # Waits for the language selection to appear and clicks it
     WebDriverWait(driver, 60).until(
-        EC.presence_of_element_located((By.ID, "langSelect-ES"))
+        EC.presence_of_element_located((By.ID, "langSelect-EN"))
     )
 
-    # clicks a language so the cookie button is available
-    lang = driver.find_element(By.ID, "langSelect-ES")
+    lang = driver.find_element(By.ID, "langSelect-EN")
     lang.click()
 
     WebDriverWait(driver, 60).until(
         EC.presence_of_element_located((By.ID, "bigCookie"))
     )
-
-    # Gets the cookie button
+    #
     cookie = driver.find_element(By.ID, "bigCookie")
 
-    while True:
-        products = driver.find_elements(By.CLASS_NAME, "product")
+    WebDriverWait(driver, 30).until(
+        EC.presence_of_all_elements_located((By.CLASS_NAME, "product"))
+    )
 
+    while True:
+        cookie.click()
+        products = driver.find_elements(By.CLASS_NAME, "product")
         for product in products:
             product_class = product.get_attribute("class")
             if product_class == "product unlocked enabled":
