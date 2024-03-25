@@ -19,11 +19,6 @@ async function getRandomAdvice() {
   }
 }
 
-
-
-
-
-
 // * using fetch to get the author of the last commit of a repository.
 
 async function get_commits() {
