@@ -1,0 +1,53 @@
+:root {
+	--accent: #007ecc;
+	--accent-2: #ec2f4b;
+	--text: #003f66;
+	--text-hover: var(--accent);
+	--text-active: #ffffff;
+	--border-width: 0.125em;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	width: 100vw;
+	height: 100vh;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    display: flex;
+}
+
+
+.links-container {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	gap: 2px;
+	color: var(--text-active);
+
+	input {
+		display: none;
+
+		&:checked + label {
+			background-color: var(--accent);
+			&:before {
+				opacity: 1;
+			}
+		}
+	}
+
+	label {
+		padding: 10px 0;
+		width: 120px;
+		background-color: var(--accent-2);
+		transition: all 0.2s ease-out;
+		border-radius: 5px;
+	}
+}
