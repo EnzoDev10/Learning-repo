@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navButton {
+	position: relative;
+}
+
+.primaryNavList {
+	position: absolute;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border: 1px solid black;
+	width: 10rem;
+	z-index: 1;
+}
+
+.primaryNavList li {
+	padding: 1rem;
+}
+
+.hidden {
+	display: none;
+}
