@@ -16,14 +16,6 @@ body {
 	background-color: #bde0fe;
 }
 
-/* 
-If instead you use display none to hide the elements,
- transition are not an option*/
-.hidden {
-	opacity: 0;
-	height: 0;
-}
-
 .modal {
 	display: flex;
 	flex-direction: column;
@@ -103,6 +95,11 @@ button {
 	z-index: 1;
 	transition: opacity 500ms ease-out;
 	opacity: 1;
+}
+
+.hidden {
+	opacity: 0;
+	height: 0;
 }
 
 img {
