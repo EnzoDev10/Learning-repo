@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mi Versión</title>
+
+		<style>
+			* {
+				font-family: sans-serif;
+			}
+
+			.hidden {
+				display: none;
+			}
+
+			.container {
+				width: 50%;
+				max-width: 800px;
+				min-width: 480px;
+				margin: 0 auto;
+			}
+
+			#numberInput {
+				width: 200px;
+			}
+
+			#gameStatus {
+				color: #fff;
+				padding: 3px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<h1>Number guessing game</h1>
+			<p>
+				We have selected a random number between 1 and 100. See if you can guess
+				it in 10 turns or fewer. We'll tell you if your guess was too high or
+				too low.
+			</p>
+
+			<form id="guessForm">
+				<label for="numberInput">Enter a guess:</label>
+				<input type="number" name="numberInput" id="numberInput" />
+				<button type="submit" id="guessBtn">Submit guess</button>
+			</form>
+
+			<p id="guessesList" class="hidden">Previous guesses:</p>
+
+			<p id="gameStatus" ></p>
+
+			<p id="hint" class="hidden">
+				
+			</p>
+
+			<button id="restartBtn" class="hidden">Start new game</button>
+		</div>
+	</body>
+	<script src="script.js"></script>
+</html>
