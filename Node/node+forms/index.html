@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>form post</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: "Roboto", sans-serif;
+				font-weight: 700;
+				font-style: normal;
+			}
+
+			body {
+				color: #fff;
+				background-color: #55171f;
+				display: flex;
+				flex-direction: column;
+				height: 100vh;
+				justify-content: center;
+				align-items: center;
+				width: 100vw;
+
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+				input,
+				button {
+					height: 30px;
+				}
+
+				input {
+					width: 300px;
+					margin-top: 10px;
+				}
+
+                button {
+                    width: 50%;
+                    align-self: center;
+                }
+			}
+		</style>
+	</head>
+	<body>
+        <form action="http://localhost:8080/example" method="POST">
+            First name: <input type="text" name="ytURL"><br>
+           <button type="submit">Send to backend</button>
+          </form>
+	</body>
+</html>
