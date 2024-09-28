@@ -1,0 +1,58 @@
+body {
+	background-color: hsla(0, 0%, 0%, 0.65);
+	color: white;
+	text-align: center;
+}
+
+/* contiene las ímagenes, necesario el relative para los botones */
+.slider {
+	position: relative;
+	margin: auto;
+	max-width: 750px;
+	width: 75%;
+}
+
+/* Por defecto oculta todas las ímagenes del slider*/
+.slider img {
+	width: 100%;
+	display: none;
+}
+
+/* displaySlide muestra la imagen pertinente y les agrega una animación */
+img.displaySlide {
+	display: block;
+	animation: fade 1s;
+}
+
+.slider button {
+	/* Posiciona los botones al medio del slider */
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	/* -- */
+	font-size: 2rem;
+	padding: 10px 15px;
+	background-color: hsla(0, 0%, 0%, 0.5);
+	border: none;
+	cursor: pointer;
+	color: inherit;
+}
+
+/* bastante explicativos por si solos */
+.previous {
+	left: 0;
+}
+
+.next {
+	right: 0;
+}
+
+/* Animación para la aparición de las ímagenes */
+@keyframes fade {
+	from {
+		opacity: 0.2;
+	}
+	to {
+		opacity: 1;
+	}
+}
